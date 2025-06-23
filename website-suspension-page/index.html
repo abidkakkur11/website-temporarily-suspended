@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Temporarily Suspended</title>
+    <meta name="description" content="This website has been temporarily suspended due to an outstanding invoice payment.">
+    <style>
+        /* Reset and base styles */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body {
+            height: 100%;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+        /* Animated background particles */
+        .particle {
+            position: absolute;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+        .particle:nth-child(1) { width: 20px; height: 20px; top: 20%; left: 20%; animation-delay: 0s; }
+        .particle:nth-child(2) { width: 15px; height: 15px; top: 60%; left: 80%; animation-delay: 2s; }
+        .particle:nth-child(3) { width: 25px; height: 25px; top: 40%; left: 40%; animation-delay: 4s; }
+        .particle:nth-child(4) { width: 12px; height: 12px; top: 70%; left: 10%; animation-delay: 1s; }
+        .particle:nth-child(5) { width: 18px; height: 18px; top: 10%; left: 70%; animation-delay: 3s; }
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0); opacity: 0.7; }
+            50% { transform: translateY(-20px) rotate(180deg); opacity: 1; }
+        }
+        /* Main container */
+        main.container {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 60px 40px;
+            text-align: center;
+            box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            max-width: 500px;
+            width: 90%;
+            animation: slideIn 1s ease-out;
+            position: relative;
+            z-index: 10;
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(50px);}
+            to { opacity: 1; transform: translateY(0);}
+        }
+        /* Glowing border animation */
+        .container::before {
+            content: '';
+            position: absolute;
+            top: -2px; left: -2px; right: -2px; bottom: -2px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #feca57, #ff9ff3, #54a0ff);
+            border-radius: 22px;
+            z-index: -1;
+            animation: glowing 3s linear infinite;
+            opacity: 0.7;
+        }
+        @keyframes glowing {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        /* Icon and text styles */
+        .icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+            display: inline-block;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1);}
+            50% { transform: scale(1.1);}
+        }
+        h1 {
+            color: #fff;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            font-weight: 300;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+        .subtitle {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+        .message {
+            color: rgba(255,255,255,0.8);
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            animation: fadeInUp 1s ease-out 0.9s both;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px);}
+            to { opacity: 1; transform: translateY(0);}
+        }
+        /* Contact button */
+        .contact-btn {
+            background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+            color: #fff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            animation: fadeInUp 1s ease-out 1.2s both;
+            box-shadow: 0 10px 20px rgba(255,107,107,0.3);
+        }
+        .contact-btn:hover, .contact-btn:focus {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(255,107,107,0.4);
+            background: linear-gradient(45deg, #ff5252, #ff7979);
+            outline: none;
+        }
+        .contact-btn:active {
+            transform: translateY(-1px);
+        }
+        /* Animated wave at bottom */
+        .wave {
+            position: absolute;
+            bottom: 0; left: 0;
+            width: 100%; height: 100px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z' fill='rgba(255,255,255,0.1)'/%3E%3C/svg%3E") repeat-x;
+            animation: wave 10s linear infinite;
+        }
+        @keyframes wave {
+            0% { background-position-x: 0;}
+            100% { background-position-x: 1200px;}
+        }
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            main.container { padding: 40px 20px; }
+            h1 { font-size: 2rem; }
+            .subtitle { font-size: 1rem; }
+            .icon { font-size: 60px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Decorative background particles -->
+    <div class="particle" aria-hidden="true"></div>
+    <div class="particle" aria-hidden="true"></div>
+    <div class="particle" aria-hidden="true"></div>
+    <div class="particle" aria-hidden="true"></div>
+    <div class="particle" aria-hidden="true"></div>
+    <!-- Animated wave at bottom -->
+    <div class="wave" aria-hidden="true"></div>
+    <main class="container" role="main" aria-label="Website Suspended Notice">
+        <div class="icon" aria-hidden="true">⚠️</div>
+        <h1>Website Suspended</h1>
+        <p class="subtitle">Temporarily Unavailable</p>
+        <p class="message">
+            This website has been temporarily suspended due to an outstanding invoice payment.<br>
+            We apologize for any inconvenience this may cause.
+        </p>
+        <a href="mailto:webmaster@example.com" class="contact-btn" aria-label="Contact Webmaster">Contact Webmaster</a>
+    </main>
+    <script>
+        // Interactive sparkle effect on mouse move
+        document.addEventListener('mousemove', function(e) {
+            createSparkle(e.clientX, e.clientY);
+        });
+        function createSparkle(x, y) {
+            const sparkle = document.createElement('div');
+            sparkle.style.position = 'fixed';
+            sparkle.style.left = x + 'px';
+            sparkle.style.top = y + 'px';
+            sparkle.style.width = '4px';
+            sparkle.style.height = '4px';
+            sparkle.style.background = 'white';
+            sparkle.style.borderRadius = '50%';
+            sparkle.style.pointerEvents = 'none';
+            sparkle.style.zIndex = '1000';
+            sparkle.style.animation = 'sparkle 1s ease-out forwards';
+            sparkle.setAttribute('aria-hidden', 'true');
+            document.body.appendChild(sparkle);
+            setTimeout(() => {
+                sparkle.remove();
+            }, 1000);
+        }
+        // Add sparkle animation keyframes if not present
+        if (!document.getElementById('sparkle-keyframes')) {
+            const style = document.createElement('style');
+            style.id = 'sparkle-keyframes';
+            style.textContent = `
+                @keyframes sparkle {
+                    0% { opacity: 1; transform: scale(0);}
+                    50% { opacity: 1; transform: scale(1);}
+                    100% { opacity: 0; transform: scale(0);}
+                }
+            `;
+            document.head.appendChild(style);
+        }
+        // Floating animation on container hover
+        const container = document.querySelector('.container');
+        container.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-10px)';
+            this.style.transition = 'transform 0.3s ease';
+        });
+        container.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+        });
+    </script>
+</body>
+</html>
